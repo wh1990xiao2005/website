@@ -1,0 +1,34 @@
+<footer class="site-footer">
+  <div class="inner">
+    {{ with .Site.Params.copyright }}
+    <section class="copyright">
+      {{ . | markdownify }}
+      <script type="text/javascript">
+        var date = new Date();
+        if (date.getFullYear() == '2022') {
+          document.write(date.getFullYear());
+        } else {
+          document.write('2022 - ' + date.getFullYear());
+        }
+      </script>
+    </section>{{ end }}
+
+    {{ if ne .Site.Params.hideGoAnnounce true }}
+    <section>
+      🤹‍♂️ 此站点由<a href="https://golang.google.cn/">Go 语言</a>驱动 🤹‍♂️
+    </section>{{ end }}
+
+    {{ if ne .Site.Params.beianInfo true }}
+    <section>
+      <a href="https://beian.miit.gov.cn/" target="_blank">津ICP备20000368号</a>
+    </section>{{ end }}
+
+    {{ if ne .Site.Params.hidedesignbyline true }}
+    <section>
+      <a href="https://themes.gohugo.io/hugo-scroll/">Design</a> template
+      built with ♥️ by
+      <a href="https://www.janraasch.com" title="Jan Raasch">Jan Raasch</a>
+    </section>{{ end }}
+
+  </div>
+</footer>
