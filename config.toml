@@ -35,7 +35,7 @@ title = "萧文翰的个人网站"
 
     # This theme will, by default, inject a design-by-line at the bottom of the page.
     # You can turn it off, but we would really appreciate if you don’t :-)
-    hidedesignbyline = true
+    hidedesignbyline = false
 
     # 主页底部显示Go语言驱动文本
     hideGoAnnounce = false
